@@ -1,0 +1,23 @@
+server:
+    port: 8080
+    context-path: /boot-test
+    
+logging:
+  config: ./config/log4j.xml
+  
+spring:
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/User?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: test
+    password: test
+    test-on-borrow: true
+    validation-query: SELECT 1
