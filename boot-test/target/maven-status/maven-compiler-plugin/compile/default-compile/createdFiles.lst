@@ -1,9 +1,0 @@
-nauroo/Application.class
-nauroo/enums/Types.class
-nauroo/db/PhoneBook.class
-nauroo/db/PhoneBookRepository.class
-nauroo/db/PhoneBookController.class
-nauroo/db/PhoneBookService.class
-nauroo/db/PhoneBookServiceImpl.class
-nauroo/MvcConfigurer.class
-nauroo/db/HomeController.class
