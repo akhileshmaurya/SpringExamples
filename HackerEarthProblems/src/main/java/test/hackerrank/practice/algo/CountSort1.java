@@ -5,17 +5,17 @@ import java.io.InputStreamReader;
 
 public class CountSort1 {
 
-	@SuppressWarnings("unused")
-	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int n = Integer.parseInt(br.readLine());
-		String[] input = br.readLine().split(" ");
-		int[] count = new int[100];
-		for (int i = 0; i < input.length; i++) {
-			count[Integer.parseInt(input[i])]++;
-		}
-		for (int i = 0; i < 100; i++) {
-			System.out.print(count[i] + " ");
-		}
-	}
+  @SuppressWarnings("unused")
+  public static void main(String[] args) throws Exception {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    int n = Integer.parseInt(br.readLine());
+    String[] input = br.readLine().split(" ");
+    int[] count = new int[100];
+    for (int i = 0; i < input.length; i++) {
+      count[Integer.parseInt(input[i])]++;
+    }
+    for (int i = 0; i < 100; i++) {
+      System.out.print(count[i] + " ");
+    }
+  }
 }
