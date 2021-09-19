@@ -1,5 +1,3 @@
 package com.furlenco.service;
 
-public class LoginService {
-
-}
+public class LoginService {}
