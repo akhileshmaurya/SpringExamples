@@ -8,14 +8,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
 
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
-    public ModelAndView hello() {
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("home");        
-        String str = "Hello World!";
-        mav.addObject("message", str);
+  @RequestMapping(value = "/home", method = RequestMethod.GET)
+  public ModelAndView hello() {
+    ModelAndView mav = new ModelAndView();
+    mav.setViewName("home");
+    String str = "Hello World!";
+    mav.addObject("message", str);
 
-        return mav;
-    }
-
+    return mav;
+  }
 }

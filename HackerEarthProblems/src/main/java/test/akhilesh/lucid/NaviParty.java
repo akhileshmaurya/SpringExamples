@@ -7,36 +7,33 @@ import java.util.Set;
 
 public class NaviParty {
 
-	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String[] input = br.readLine().trim().split(" ");
-		int n = Integer.parseInt(input[0]);
-		int q = Integer.parseInt(input[1]);
-		Set<String> invitedGuest = new HashSet<String>(n);
-		for (int i = 0; i < n; i++) {
-			invitedGuest.add(br.readLine().trim());
-		}
-		int unInvitedGuest = 0;
-		for (int i = 0; i < q; i++) {
-			String nameOrAge = br.readLine().trim();
-			if (isContainsNumberOnly(nameOrAge)) {
-				int age = Integer.parseInt(nameOrAge);
-				if (age <= 20)
-					unInvitedGuest++;
-			} else {
-				if (!invitedGuest.contains(nameOrAge))
-					unInvitedGuest++;
-			}
-		}
-		System.out.println(unInvitedGuest);
-	}
+  public static void main(String[] args) throws Exception {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    String[] input = br.readLine().trim().split(" ");
+    int n = Integer.parseInt(input[0]);
+    int q = Integer.parseInt(input[1]);
+    Set<String> invitedGuest = new HashSet<String>(n);
+    for (int i = 0; i < n; i++) {
+      invitedGuest.add(br.readLine().trim());
+    }
+    int unInvitedGuest = 0;
+    for (int i = 0; i < q; i++) {
+      String nameOrAge = br.readLine().trim();
+      if (isContainsNumberOnly(nameOrAge)) {
+        int age = Integer.parseInt(nameOrAge);
+        if (age <= 20) unInvitedGuest++;
+      } else {
+        if (!invitedGuest.contains(nameOrAge)) unInvitedGuest++;
+      }
+    }
+    System.out.println(unInvitedGuest);
+  }
 
-	private static boolean isContainsNumberOnly(String input) {
-		String regex = "[0-9]+";
-		boolean b = input.matches(regex);
-		return b;
-	}
-
+  private static boolean isContainsNumberOnly(String input) {
+    String regex = "[0-9]+";
+    boolean b = input.matches(regex);
+    return b;
+  }
 }
 
 /*
