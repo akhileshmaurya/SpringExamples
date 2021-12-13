@@ -6,21 +6,19 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-@Configuration  
-public class MvcConfigurer extends WebMvcConfigurerAdapter {  
-  
-	@Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        configurer.enable();
-    }
+@Configuration
+public class MvcConfigurer extends WebMvcConfigurerAdapter {
 
-    @Bean
-    public InternalResourceViewResolver viewResolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("WEB-INF/pages/");
-        resolver.setSuffix(".jsp");
-        return resolver;
-    }
+  @Override
+  public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+    configurer.enable();
+  }
 
-  
-}  
+  @Bean
+  public InternalResourceViewResolver viewResolver() {
+    InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+    resolver.setPrefix("WEB-INF/pages/");
+    resolver.setSuffix(".jsp");
+    return resolver;
+  }
+}

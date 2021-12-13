@@ -5,31 +5,30 @@ import java.io.InputStreamReader;
 
 public class SaveThePrisoner {
 
-	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int t = Integer.parseInt(br.readLine().trim());
-		long m, n, s;
-		while (t > 0) {
-			String[] input = br.readLine().trim().split(" ");
-			n = Long.parseLong(input[0]);
-			m = Long.parseLong(input[1]);
-			s = Long.parseLong(input[2]);
-			m = m % n;
-			if (m == 0) {
-				s = s - 1;
-			} else {
-				s = s + m - 1;
-			}
-			if (s < 1) {
-				s = n;
-			} else if (s > n) {
-				s = s - n;
-			}
-			System.out.println(s);
-			--t;
-		}
-	}
-
+  public static void main(String[] args) throws Exception {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    int t = Integer.parseInt(br.readLine().trim());
+    long m, n, s;
+    while (t > 0) {
+      String[] input = br.readLine().trim().split(" ");
+      n = Long.parseLong(input[0]);
+      m = Long.parseLong(input[1]);
+      s = Long.parseLong(input[2]);
+      m = m % n;
+      if (m == 0) {
+        s = s - 1;
+      } else {
+        s = s + m - 1;
+      }
+      if (s < 1) {
+        s = n;
+      } else if (s > n) {
+        s = s - n;
+      }
+      System.out.println(s);
+      --t;
+    }
+  }
 }
 
 /*
@@ -41,6 +40,6 @@ But wait—there's a catch—the very last sweet is poisoned! Can you find and p
 
 Input Format
 
-The first line contains an integer, TT, denoting the number of test cases. 
-The TT subsequent lines each contain 33 space-separated integers: 
+The first line contains an integer, TT, denoting the number of test cases.
+The TT subsequent lines each contain 33 space-separated integers:
 NN (the number of prisoners), MM (the number of sweets), and SS (the prisoner ID), respectively.*/
