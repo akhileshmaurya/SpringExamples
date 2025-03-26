@@ -5,32 +5,29 @@ import java.io.InputStreamReader;
 
 public class MagicOfSirJadeja {
 
+  public static void main(String[] args) throws Exception {
 
-	public static void main(String[] args) throws Exception {
+    String members[] = {"Rohit", "Dhawan", "Kohli", "Yuvraj", "Raina", "Dhoni", "Sir Jadeja"};
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    int t = Integer.parseInt(br.readLine().trim());
+    while (t > 0) {
+      int k = Integer.parseInt(br.readLine().trim());
+      System.out.println(members[getNthStepAfterBatting(k)]);
+      t--;
+    }
+  }
 
-		String members[] = { "Rohit", "Dhawan", "Kohli", "Yuvraj", "Raina", "Dhoni", "Sir Jadeja" };
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int t = Integer.parseInt(br.readLine().trim());
-		while (t > 0) {
-			int k = Integer.parseInt(br.readLine().trim());
-			System.out.println(members[getNthStepAfterBatting(k)]);
-			t--;
-		}
-
-	}
-
-	static int getNthStepAfterBatting(int k) {
-		int temp = 7;
-		int count = 1;
-		while (k > temp) {
-			k = k - temp;
-			temp = temp * 2;
-			count = count * 2;
-		}
-		k--;
-		return k / count;
-	}
-
+  static int getNthStepAfterBatting(int k) {
+    int temp = 7;
+    int count = 1;
+    while (k > temp) {
+      k = k - temp;
+      temp = temp * 2;
+      count = count * 2;
+    }
+    k--;
+    return k / count;
+  }
 }
 /*
  * Team India is playing too much cricket in this season. Team players are
@@ -45,15 +42,15 @@ public class MagicOfSirJadeja {
  * line up. In this way they will get a chance to play a ball turn by turn. Your
  * task is very simple. You are required to output the name of a player as given
  * in the above list who will play a Kth ball.
- * 
+ *
  * Input
- * 
+ *
  * First line will contain T (No. of test cases). Each test case will consist of
  * one line containing the value of K . Output
- * 
+ *
  * For every test case, print a new line having the name of a player who will
  * play the Kth ball. Constraints
- * 
+ *
  * 1 ≤ T ≤ 1000 1 ≤ K ≤ 109 Sample Input(Plaintext Link) 2 3 9 Sample
  * Output(Plaintext Link) Kohli Rohit
  */

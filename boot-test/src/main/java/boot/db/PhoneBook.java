@@ -1,7 +1,7 @@
 package boot.db;
 
+import boot.enums.Types;
 import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -9,62 +9,60 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import boot.enums.Types;
-
 @Entity
 public class PhoneBook implements Serializable {
-	private static final long serialVersionUID = 1L;
-	
-	@Id  @GeneratedValue(strategy=GenerationType.IDENTITY)
-	long id;
+  private static final long serialVersionUID = 1L;
 
-	String name;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  long id;
 
-	@Enumerated(EnumType.STRING)
-	Types types;
+  String name;
 
-	String address;
+  @Enumerated(EnumType.STRING)
+  Types types;
 
-	String mobile;
+  String address;
 
-	public long getId() {
-		return id;
-	}
+  String mobile;
 
-	public void setId(long id) {
-		this.id = id;
-	}
+  public long getId() {
+    return id;
+  }
 
-	public String getName() {
-		return name;
-	}
+  public void setId(long id) {
+    this.id = id;
+  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  public String getName() {
+    return name;
+  }
 
-	public Types getTypes() {
-		return types;
-	}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	public void setTypes(Types types) {
-		this.types = types;
-	}
+  public Types getTypes() {
+    return types;
+  }
 
-	public String getAddress() {
-		return address;
-	}
+  public void setTypes(Types types) {
+    this.types = types;
+  }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+  public String getAddress() {
+    return address;
+  }
 
-	public String getMobile() {
-		return mobile;
-	}
+  public void setAddress(String address) {
+    this.address = address;
+  }
 
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
+  public String getMobile() {
+    return mobile;
+  }
 
+  public void setMobile(String mobile) {
+    this.mobile = mobile;
+  }
 }
