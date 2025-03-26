@@ -6,7 +6,4 @@ import org.springframework.web.bind.annotation.RestController;
  * @author akhilesh
  */
 @RestController
-public class LogoutController {
-
-	
-}
+public class LogoutController {}
